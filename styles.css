@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  padding: 5px;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  grid-template-rows: 1fr 1fr 6fr 1fr 1fr;
+  grid-template-areas:
+    "header"
+    "menu"
+    "formulario"
+    "aside"
+    "footer";
+}
+
+header,
+nav,
+#enlaces,
+aside,
+footer {
+  /* width: 100%; */
+  border: 2px solid #1c77df;
+  /* margin: 5px; */
+  /* min-height: 100px; */
+  background-color: #5797df;
+  text-align: center;
+  color: white;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: menu;
+}
+
+section {
+  grid-area: formulario;
+}
+
+footer {
+  grid-area: footer;
+}
+
+aside {
+  grid-area: aside;
+}
+
+#enlaces {
+  grid-area: enlaces;
+  display: none;
+}
+
+/* Formulario */
+
+section {
+  text-align: center;
+}
+
+label {
+  display: none;
+}
+
+input,
+textarea {
+  border: 1px solid blue;
+  border-radius: 5px;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  display: none;
+}
+
+button {
+  background-color: #8086e8;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 4px 4px 0px 0px rgba(77, 77, 77, 0.58);
+}
+
+/*  ---------Tablet------------- */
+@media (min-width: 680px) {
+  body {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 1fr 10fr 1fr;
+    grid-template-areas:
+      "header header"
+      "menu aside"
+      "formulario aside"
+      "footer footer";
+  }
+  section {
+    margin: 0 auto;
+  }
+
+  fieldset {
+    border: 1px solid blue;
+    width: 500px;
+    margin: 10px;
+  }
+  legend {
+    display: block;
+    text-align: center;
+    color: #8086e8;
+  }
+  button {
+    width: 500px;
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+  label {
+    display: block;
+    text-align: left;
+  }
+}
+
+/* ---------Escritorio------------- */
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "menu menu menu"
+      "enlaces formulario aside"
+      "footer footer footer";
+  }
+  #enlaces {
+    display: block;
+  }
+
+  input,
+  textarea {
+    width: 300px;
+  }
+
+  label {
+    display: inline;
+  }
+
+  .linea {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+  }
+
+  button {
+    width: 100px;
+  }
+
+  input,
+  textarea {
+    border: 1px dotted blue;
+    border-radius: initial;
+  }
+  input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+}

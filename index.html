@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen DIW</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+  </head>
+  <body>
+    <header>Nombre Alumno</header>
+    <nav>Menu</nav>
+    <section>
+      <h1>Formulario de contacto</h1>
+      <form id="info">
+        <fieldset>
+          <legend>Informacion personal</legend>
+          <div class="linea">
+            <label for="apellidos">Apellidos</label>
+            <input
+              placeholder="Apellidos..."
+              pattern="[A-Za-z0-9]+"
+              maxlength="15"
+              required
+              type="text"
+              name="apellidos"
+              id="apellidos"
+            />
+          </div>
+          <div class="linea">
+            <label for="nombre">Nombre</label>
+            <input
+              placeholder="Nombre..."
+              pattern="[A-Za-z0-9]+"
+              maxlength="15"
+              required
+              type="text"
+              name="nombre"
+              id="nombre"
+            />
+          </div>
+          <div class="linea">
+            <label for="edad">Edad</label>
+            <input
+              placeholder="Edad..."
+              min="18"
+              max="99"
+              type="number"
+              name="edad"
+              id="edad"
+            />
+          </div>
+          <div class="linea">
+            <label for="fechaNacimiento">Fecha Nacimiento</label>
+            <input
+              required
+              type="date"
+              name="fechaNacimiento"
+              id="fechaNacimiento"
+            />
+          </div>
+          <div class="linea">
+            <label for="nif">NIF</label>
+            <input
+              placeholder="NIF..."
+              maxlength="9"
+              type="text"
+              name="nif"
+              id="nif"
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Direccion</legend>
+          <div class="linea">
+            <label for="tipoVia">Tipo de via</label>
+            <input
+              placeholder="Calle"
+              required
+              list="vias"
+              name="tipoVia"
+              id="tipoVia"
+            />
+            <datalist id="vias">
+              <option value="Calle"></option>
+              <option value="Avenida"></option>
+            </datalist>
+          </div>
+          <div class="linea">
+            <label for="direccion">Direccion</label>
+            <input
+              placeholder="Direccion..."
+              pattern="[A-Za-z0-9]+"
+              maxlength="15"
+              type="text"
+              name="direccion"
+              id="direccion"
+            />
+          </div>
+          <div class="linea">
+            <label for="ciudad">Ciudad</label>
+            <input
+              placeholder="Ciudad..."
+              pattern="[A-Za-z0-9]+"
+              maxlength="15"
+              type="text"
+              name="ciudad"
+              id="ciudad"
+            />
+          </div>
+          <div class="linea">
+            <label for="provincia">Provincia</label>
+            <input
+              placeholder="Provincia..."
+              pattern="[A-Za-z0-9]+"
+              maxlength="15"
+              type="text"
+              name="provincia"
+              id="provincia"
+            />
+          </div>
+          <div class="linea">
+            <label for="codigoPostal">Codigo postal</label>
+            <input
+              placeholder="Código postal..."
+              required
+              type="text"
+              name="codigoPostal"
+              id="codigoPostal"
+            />
+          </div>
+          <div class="linea">
+            <label for="telefono">telefono</label>
+            <input
+              placeholder="Teléfono..."
+              required
+              type="tel"
+              name="telefono"
+              id="telefono"
+            />
+          </div>
+          <div class="linea">
+            <label for="correo">Correo</label>
+            <input
+              placeholder="Correo electrónico..."
+              type="email"
+              name="correo"
+              id="correo"
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Otros</legend>
+          <div class="linea">
+            <label for="informacionAdicional">Informacion adicional</label>
+
+            <textarea
+              placeholder="Información adicional..."
+              name="informacionAdicional"
+              id="informacionAdicional"
+            ></textarea>
+          </div>
+        </fieldset>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+    <div id="enlaces">Menu enlaces</div>
+    <aside>Banner</aside>
+    <footer>Footer</footer>
+  </body>
+</html>
